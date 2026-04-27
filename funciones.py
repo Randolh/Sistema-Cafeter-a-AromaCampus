@@ -154,6 +154,14 @@ def eliminar_producto():
                     print("\nOpción no disponible!")
                     input("Presione (Enter) para continuar...")
                     continue
+        else:
+            productos.pop(list_keys[opt - 1])
+
+            escribir_json(archivo_productos, productos)
+
+            print("\nProducto Eliminado Correctamente!")
+            input("Presione (Enter) para continuar...")
+            return
 
 
 def actualizar_cantidad():
