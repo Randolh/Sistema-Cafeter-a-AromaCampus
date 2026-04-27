@@ -19,7 +19,7 @@ def leer_json(archivito):
 def escribir_json(archivito, contenido):
     with open(archivito, "w")as archivo:
         guardar = dumps(contenido, indent=4)
-        
+        archivo.write(guardar)
 
 def agregar_coffee():
     
@@ -55,23 +55,21 @@ def agregar_coffee():
                 print("Ingrese un nombre válido, no puede dejar espacios vacíos")
                 continue
 
-            if descripcion in datos:
-                print("El producto ya existe en el inventario")
-                continue
 
-            datos[nombre_producto]["Descripcion"] = descripcion
-            print("Cantidad agregada correctamente")
-        
+            while True:
+                datos = leer_json(archivo_productos)
+
+            
+
             disponiblidad = True
 
 
+            datos[nombre_producto] = {
 
-            datos [nombre_producto] = {
-
-                "Precio" : precio,
-                "Cantidad": cantidad,
-                "Disponibilidad": disponiblidad,
-                "Descripcion":
+                "precio" : precio,
+                "cantidad": cantidad,
+                "disponibilidad": disponiblidad,
+                "descripcion": descripcion
             }
 
             escribir_json(archivo_productos, datos)

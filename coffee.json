@@ -4,5 +4,11 @@
         "nivel": "medio",
         "disponibilidad": true,
         "stock": 100
+    },
+    "Americano": {
+        "precio": 25,
+        "cantidad": 100,
+        "disponibilidad": true,
+        "descripcion": "Sin nada"
     }
 }
