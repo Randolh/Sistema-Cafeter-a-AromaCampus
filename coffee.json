@@ -1,20 +1,8 @@
 {
-    "Latte": {
-        "descripcion": "Cafe con leche espumosa",
-        "nivel": "medio",
-        "disponibilidad": true,
-        "stock": 100
-    },
-    "Americano": {
-        "precio": 25,
-        "cantidad": 100,
-        "disponibilidad": true,
-        "descripcion": "Sin nada"
-    },
     "Capuccino": {
         "precio": 45,
-        "cantidad": 100,
-        "disponibilidad": true,
+        "cantidad": 0,
+        "disponibilidad": false,
         "descripcion": "Espumoso",
         "tostado": "Oscuro"
     },

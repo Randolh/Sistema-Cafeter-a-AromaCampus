@@ -154,3 +154,58 @@ def eliminar_producto():
                     print("\nOpción no disponible!")
                     input("Presione (Enter) para continuar...")
                     continue
+
+
+def actualizar_cantidad():
+    productos = leer_json(archivo_productos)
+
+    if not productos:
+        print("No hay productos en el inventario para actualizar.")
+        return
+    
+    agregar_producto = input("Ingrese el nombre del café que desea actualizar: ").strip().title()
+
+    if agregar_producto not in productos: 
+        print("Producto no existe")
+        return
+    
+    else: 
+        print(productos[agregar_producto])
+
+    while True:
+        try:
+            opc = int (input("""Desea agregar una cantidad al inventario
+                             
+                             1. Si
+                             2. Volver
+    
+Ingrese un número válido: """))
+        except ValueError:
+            print("Por favor, ingrese un número válido.")
+            continue
+            
+
+        if opc == 1:
+            agregar = int(input("Ingrese la cantidad de unidades: "))
+
+            if agregar < 0:
+                print("Ingrese una cantidad válida")
+                break
+
+            if agregar == 0:
+                productos[agregar_producto]["disponibilidad"] = False
+
+            productos[agregar_producto]["cantidad"] = agregar
+            escribir_json(archivo_productos, productos)
+            print("Cantidad agregada correctamente")
+            break
+        elif opc == 2:
+            break
+
+        else:
+            print("Opción no válida, intente de nuevo")
+
+
+
+
+
