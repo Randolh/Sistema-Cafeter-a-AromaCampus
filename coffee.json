@@ -4,5 +4,25 @@
         "nivel": "medio",
         "disponibilidad": true,
         "stock": 100
+    },
+    "Americano": {
+        "precio": 25,
+        "cantidad": 100,
+        "disponibilidad": true,
+        "descripcion": "Sin nada"
+    },
+    "Capuccino": {
+        "precio": 45,
+        "cantidad": 100,
+        "disponibilidad": true,
+        "descripcion": "Espumoso",
+        "tostado": "Oscuro"
+    },
+    "Brew": {
+        "precio": 26,
+        "cantidad": 50,
+        "disponibilidad": true,
+        "descripcion": "Fuerte amargo",
+        "tostado": "Oscuro"
     }
 }
