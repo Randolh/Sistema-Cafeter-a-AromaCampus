@@ -206,6 +206,6 @@ Ingrese un número válido: """))
             print("Opción no válida, intente de nuevo")
 
 
-actualizar_cantidad()
+
 
 
