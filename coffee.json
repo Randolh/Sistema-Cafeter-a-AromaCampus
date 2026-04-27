@@ -9,7 +9,8 @@
         "precio": 25,
         "cantidad": 100,
         "disponibilidad": true,
-        "descripcion": "Sin nada"
+        "descripcion": "Sin nada",
+        "Cantidad": 88
     },
     "Capuccino": {
         "precio": 45,
