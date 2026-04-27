@@ -63,7 +63,8 @@ def agregar_coffee():
                       
                       1. Bajo
                       2. Medio
-                      3. Oscuro """))
+                      3. Oscuro 
+                                """))
                 
                 
                 if opc == 1:
