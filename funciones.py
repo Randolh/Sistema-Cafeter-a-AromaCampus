@@ -55,26 +55,42 @@ def agregar_coffee():
                 print("Ingrese un nombre válido, no puede dejar espacios vacíos")
                 continue
 
+            tostado = ""
 
             while True:
                 datos = leer_json(archivo_productos)
+                opc = int(input("""Ingrese el nivel de tostado del cafe
+                      
+                      1. Bajo
+                      2. Medio
+                      3. Oscuro """))
+                
+                
+                if opc == 1:
+                    tostado = "Bajo"
+                if opc == 2:
+                    tostado = "Medio"
+                if opc == 3:
+                    tostado = "Oscuro"
+                else:
+                    print("""Has salido de "Agregar" """)
+                    continue
+                    
+                disponiblidad = True
 
-            
 
-            disponiblidad = True
+                datos[nombre_producto] = {
 
+                    "precio" : precio,
+                    "cantidad": cantidad,
+                    "disponibilidad": disponiblidad,
+                    "descripcion": descripcion,
+                    "tostado": tostado
+                }
 
-            datos[nombre_producto] = {
-
-                "precio" : precio,
-                "cantidad": cantidad,
-                "disponibilidad": disponiblidad,
-                "descripcion": descripcion
-            }
-
-            escribir_json(archivo_productos, datos)
-            break
-
+                escribir_json(archivo_productos, datos)
+                print("Has agregado tu café con Éxito")
+                return
 
 
 agregar_coffee()
