@@ -154,3 +154,4 @@ def eliminar_producto():
                     print("\nOpción no disponible!")
                     input("Presione (Enter) para continuar...")
                     continue
+
