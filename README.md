@@ -1,4 +1,4 @@
-#Tienda GitHub
+# Tienda GitHub
 
 
 La aplicación permite administrar los productos de una tienda.
@@ -67,4 +67,4 @@ main.py
 **Randohl Estuardo Tecún**
 [Github:](https://github.com/Randolh/)
 
-![Kirby](/assets/kirby_pb.png)
+![Kirby](https://raw.githubusercontent.com/StefannyEstevezSolares/taller_colaborativoRS/refs/heads/main/assets/kirby_pb.png)
