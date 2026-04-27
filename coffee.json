@@ -1,0 +1,8 @@
+{
+    "Latte": {
+        "descripcion": "Cafe con leche espumosa",
+        "nivel": "medio",
+        "disponibilidad": true,
+        "stock": 100
+    }
+}
