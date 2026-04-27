@@ -192,7 +192,10 @@ Ingrese un número válido: """))
                 print("Ingrese una cantidad válida")
                 break
 
-            productos[agregar_producto]["Cantidad"] = agregar
+            if agregar == 0:
+                productos[agregar_producto]["disponibilidad"] = False
+
+            productos[agregar_producto]["cantidad"] = agregar
             escribir_json(archivo_productos, productos)
             print("Cantidad agregada correctamente")
             break
@@ -201,5 +204,8 @@ Ingrese un número válido: """))
 
         else:
             print("Opción no válida, intente de nuevo")
+
+
+actualizar_cantidad()
 
 
