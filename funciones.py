@@ -112,9 +112,8 @@ def eliminar_producto():
         for i, nombre in enumerate(productos_sin_dispo, start=1):
             caffe_p = productos[nombre]
 
-            nombre = caffe_p["descripcion"]
             dispo = caffe_p["disponibilidad"]
-            stock = caffe_p["stock"]
+            stock = caffe_p["cantidad"]
 
             print(f'{i}. {nombre} - Stock: {stock} | Disponibilidad: {"Si" if dispo else "No"}')
 
@@ -132,7 +131,7 @@ def eliminar_producto():
             input("Presione (Enter) para continuar...")
             continue
 
-        valor_s = productos[list_keys[opt - 1]]["stock"]    
+        valor_s = productos[list_keys[opt - 1]]["cantidad"]    
 
         if valor_s > 0:
             while True:
