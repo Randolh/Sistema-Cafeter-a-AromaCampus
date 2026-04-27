@@ -1,4 +1,4 @@
-from funciones import eliminar_producto, agregar_coffee
+from funciones import eliminar_producto, agregar_coffee, actualizar_cantidad
 
 def main_menu():
     while True:
@@ -14,7 +14,7 @@ def main_menu():
         if opt == "1":
             agregar_coffee()
         elif opt == "2":
-            print("Editar")
+            actualizar_cantidad()
         elif opt == "3":
             eliminar_producto()
         elif opt == "4":
