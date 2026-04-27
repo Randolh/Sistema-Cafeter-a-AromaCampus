@@ -1,0 +1,16 @@
+{
+    "Capuccino": {
+        "precio": 45,
+        "cantidad": 0,
+        "disponibilidad": false,
+        "descripcion": "Espumoso",
+        "tostado": "Oscuro"
+    },
+    "Brew": {
+        "precio": 26,
+        "cantidad": 50,
+        "disponibilidad": true,
+        "descripcion": "Fuerte amargo",
+        "tostado": "Oscuro"
+    }
+}
