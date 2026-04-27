@@ -1,6 +1,6 @@
 from json import dumps, load, JSONDecodeError
 
-archivo_productos = "productos.json"
+archivo_productos = "coffee.json"
 
 
 def leer_json(archivito):
@@ -19,4 +19,64 @@ def leer_json(archivito):
 def escribir_json(archivito, contenido):
     with open(archivito, "w")as archivo:
         guardar = dumps(contenido, indent=4)
-        archivo.write(guardar)
+        
+
+def agregar_coffee():
+    
+    while True:
+        datos = leer_json(archivo_productos)
+        nombre_producto = input("Ingrese el nombre del café: ").strip().title()
+
+        if nombre_producto == "":
+            print("Ingrese un nombre válido, no puede dejar espacios vacíos")
+            continue
+
+        if nombre_producto in datos:
+            print("El producto ya existe en el inventario")
+            continue
+            
+
+
+        while True:
+            try:
+                precio = int(input("Ingrese el precio por unidad del producto: "))
+                cantidad = int(input("Ingrese la cantidad de productos en stock: "))
+                break
+            except:
+                print("Ingrese una cantidad valida")
+                continue
+                
+        
+        while True:
+            datos = leer_json(archivo_productos)
+            descripcion = input("Ingrese la descripción del café a agregar ").strip()
+
+            if descripcion == "":
+                print("Ingrese un nombre válido, no puede dejar espacios vacíos")
+                continue
+
+            if descripcion in datos:
+                print("El producto ya existe en el inventario")
+                continue
+
+            datos[nombre_producto]["Descripcion"] = descripcion
+            print("Cantidad agregada correctamente")
+        
+            disponiblidad = True
+
+
+
+            datos [nombre_producto] = {
+
+                "Precio" : precio,
+                "Cantidad": cantidad,
+                "Disponibilidad": disponiblidad,
+                "Descripcion":
+            }
+
+            escribir_json(archivo_productos, datos)
+            break
+
+
+
+agregar_coffee()
